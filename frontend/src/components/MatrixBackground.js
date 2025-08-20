@@ -52,19 +52,19 @@ const MatrixBackground = () => {
         // Random chance for different effects
         if (Math.random() > 0.98) {
           // Bright flash
-          ctx.fillStyle = '#ffffff';
+          ctx.fillStyle = '#F0F0F0';
           ctx.fillText(char, x, y);
-          ctx.fillStyle = '#00ff41';
+          ctx.fillStyle = '#39FF14';
         } else if (Math.random() > 0.95) {
-          // Pink/purple accent
-          ctx.fillStyle = '#ff0080';
+          // Electric Blue accent
+          ctx.fillStyle = '#00BFFF';
           ctx.fillText(char, x, y);
-          ctx.fillStyle = '#00ff41';
+          ctx.fillStyle = '#39FF14';
         } else if (Math.random() > 0.93) {
-          // Cyan accent
-          ctx.fillStyle = '#00ffff';
+          // Alert Red accent
+          ctx.fillStyle = '#FF3131';
           ctx.fillText(char, x, y);
-          ctx.fillStyle = '#00ff41';
+          ctx.fillStyle = '#39FF14';
         }
 
         // Reset drop to top randomly
