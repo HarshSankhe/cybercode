@@ -64,13 +64,13 @@ const Dashboard = ({ systemStatus }) => {
   };
 
   const StatCard = ({ title, value, icon: Icon, color, subtitle, trend }) => (
-    <div className="cyber-card p-6 relative group">
+    <div className="cyber-card p-6 relative group hover-glow fade-in">
       <div className="flex items-center justify-between mb-4">
         <div className={`p-3 rounded-lg bg-gradient-to-br ${color} shadow-lg`}>
           <Icon className="w-6 h-6 text-black" />
         </div>
         {trend && (
-          <div className={`flex items-center space-x-1 ${trend > 0 ? 'text-green-400' : 'text-red-400'}`}>
+          <div className={`flex items-center space-x-1 ${trend > 0 ? 'text-matrix-primary' : 'text-matrix-accent'}`}>
             <TrendingUp className={`w-4 h-4 ${trend < 0 ? 'transform rotate-180' : ''}`} />
             <span className="text-sm font-mono">{Math.abs(trend)}%</span>
           </div>
@@ -78,16 +78,11 @@ const Dashboard = ({ systemStatus }) => {
       </div>
       
       <div>
-        <h3 className="text-2xl font-bold text-green-400 font-mono mb-1">{value}</h3>
-        <p className="text-green-400/70 text-sm font-mono">{title}</p>
+        <h3 className="text-2xl font-bold text-matrix-text font-mono mb-1">{value}</h3>
+        <p className="text-matrix-dim text-sm font-mono">{title}</p>
         {subtitle && (
-          <p className="text-green-400/50 text-xs font-mono mt-1">{subtitle}</p>
+          <p className="text-matrix-dimmer text-xs font-mono mt-1">{subtitle}</p>
         )}
-      </div>
-      
-      {/* Animated border effect */}
-      <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-r from-green-400/20 via-cyan-400/20 to-purple-400/20 p-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="w-full h-full bg-black rounded-md"></div>
       </div>
     </div>
   );
