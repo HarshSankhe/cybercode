@@ -266,19 +266,19 @@ const Dashboard = ({ systemStatus }) => {
   return (
     <div className="p-8 space-y-8 relative z-10">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-green-400 font-mono mb-2 glitch" data-text="CYPHER MATRIX">
+      <div className="mb-8 fade-in">
+        <h1 className="text-4xl font-bold text-matrix-text font-mono mb-2 glitch" data-text="CYPHER MATRIX">
           CYPHER MATRIX
         </h1>
-        <p className="text-green-400/70 font-mono">Advanced DeepFake Detection & Threat Analysis</p>
+        <p className="text-matrix-dim font-mono">Advanced DeepFake Detection & Threat Analysis</p>
         <div className="flex items-center space-x-4 mt-4">
           <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-green-400 text-sm font-mono">System Online</span>
+            <div className="w-3 h-3 bg-matrix-primary rounded-full animate-pulse"></div>
+            <span className="text-matrix-primary text-sm font-mono status-online">System Online</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Wifi className="w-4 h-4 text-cyan-400" />
-            <span className="text-cyan-400 text-sm font-mono">Quantum Link Active</span>
+            <Wifi className="w-4 h-4 text-matrix-secondary" />
+            <span className="text-matrix-secondary text-sm font-mono">Quantum Link Active</span>
           </div>
         </div>
       </div>
