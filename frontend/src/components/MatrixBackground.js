@@ -31,10 +31,10 @@ const MatrixBackground = () => {
 
     const draw = () => {
       // Black background with slight transparency for trail effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.03)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#00ff41';
+      ctx.fillStyle = '#39FF14'; // Matrix Neon Green
       ctx.font = `${fontSize}px 'Source Code Pro', monospace`;
 
       // Loop through drops
