@@ -89,27 +89,27 @@ const Dashboard = ({ systemStatus }) => {
 
   const ThreatLevelIndicator = ({ level }) => {
     const colors = {
-      low: { bg: 'from-green-400 to-green-600', text: 'text-green-400', border: 'border-green-400' },
+      low: { bg: 'from-matrix-primary to-green-600', text: 'text-matrix-primary', border: 'border-matrix-primary' },
       medium: { bg: 'from-yellow-400 to-orange-500', text: 'text-yellow-400', border: 'border-yellow-400' },
-      high: { bg: 'from-red-400 to-red-600', text: 'text-red-400', border: 'border-red-400' }
+      high: { bg: 'from-matrix-accent to-red-600', text: 'text-matrix-accent', border: 'border-matrix-accent' }
     };
     
     const config = colors[level] || colors.low;
     
     return (
-      <div className={`cyber-card p-6 border-2 ${config.border}`}>
+      <div className={`cyber-card p-6 border-2 ${config.border} holographic`}>
         <div className="flex items-center space-x-4">
           <div className={`p-4 rounded-full bg-gradient-to-r ${config.bg} animate-pulse`}>
             <Shield className="w-8 h-8 text-black" />
           </div>
           <div>
-            <h3 className={`text-2xl font-bold ${config.text} font-mono uppercase`}>
-              {level} Threat
+            <h3 className={`text-2xl font-bold ${config.text} font-mono uppercase glitch`} data-text={`${level} THREAT`}>
+              {level} THREAT
             </h3>
-            <p className="text-green-400/70 font-mono">Current Security Level</p>
+            <p className="text-matrix-dim font-mono">Current Security Level</p>
             <div className="flex items-center mt-2">
               <div className={`w-3 h-3 rounded-full ${config.bg} bg-gradient-to-r animate-ping mr-2`}></div>
-              <span className="text-xs text-green-400/60">Real-time monitoring active</span>
+              <span className="text-xs text-matrix-dimmer">Real-time monitoring active</span>
             </div>
           </div>
         </div>
