@@ -16,8 +16,8 @@ const MatrixBackground = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Matrix characters
-    const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ';
+    // Matrix characters with more variety
+    const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ10110100ABCDEF';
     const charArray = chars.split('');
     
     const fontSize = 14;
